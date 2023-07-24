@@ -45,12 +45,9 @@ let getRandomInt = (max) => {
 
 // Задание №5
 
-let arrOne = ["Я", "прохожу", "курс"];
-arrOne[arrOne.length] = "не прохожу";
-
-arrOne.forEach(function(item) {
-  console.log(item);
-});
+let arr = [1, 2, 3];
+console.log(arr.length);
+arr.forEach(el => console.log(el))
 
 
 // Задание №6
