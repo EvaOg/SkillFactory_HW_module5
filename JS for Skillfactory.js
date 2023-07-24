@@ -37,7 +37,7 @@ console.log(word);
 
 // Задание №4
 
-function getRandomInt(max) {
+let getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
   }
   
