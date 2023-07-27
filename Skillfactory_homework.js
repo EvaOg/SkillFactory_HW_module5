@@ -65,43 +65,40 @@ console.log(result)
 
 // Задание №7
 
-let arr = [0,0];
-let oddN = 0;
-let evenN = 0;
-let nullN = 0;
-    
-
+let arr = [1, 3, 4, 2, 7, 9, 0, 0]
+let oddArr = [] 
+let evenArr = []
+let zerroArr = []
 for (let i = 0; i < arr.length; i++) {
-    if(arr[i] % 2 != 0) {
-      oddN = oddN + 1;
+    if (typeof arr[i] == 'number' && arr[i] > 0) {
+        if (arr[i] % 2 == 0) {
+            evenArr.push(arr[i])
+        } 
+        if (arr[i] % 2 != 0) {
+            oddArr.push(arr[i])
+        }
     }
-  
-   else if(arr[i] % 2 === 0 && arr[i] !== 0) {
-      evenN = evenN + 1;
+        if (arr[i] == 0) {
+            zerroArr.push(arr[i])
     }
-  
-    else if (arr[i] === 0) {
-    nullN = nullN + 1;
-  }
 }
 
-console.log("Odd Numbers in array: " + oddN);
-console.log("Even Numbers in array: " + evenN);
-console.log(`There are ${nullN} nulls in array`);
+console.log(evenArr.length)
+console.log(oddArr.length)
+console.log(zerroArr.length)
 
 
 // Задание №8
 
-let dataUsers = new Map ([
-  ["Igor", "Team 2"],
-  ["Niko", "Team 1"],
-  ["Eva", "Team 3"],
-]);
 
-for (let usersName of dataUsers.values()) {
-  console.log(usersName);
-};
+let map = new Map();
 
-for (let usersTeam of dataUsers.keys()) {
-  console.log(usersTeam);
-};
+map.set("number", "string");    
+map.set(2, "number");     
+map.set(false, "boolean"); 
+map.set("undefined", "undefined");
+
+
+for(let [key, value] of map) {
+    console.log(`Key is: ${key}, value is: ${value}`)
+}
